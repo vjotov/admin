@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.1.11.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
+	id "org.flywaydb.flyway" version "6.1.3"
 }
 
 group = 'com.jotov'
@@ -13,6 +14,18 @@ configurations {
 	runtimeClasspath {
 		extendsFrom developmentOnly
 	}
+//	flywayMigration
+}
+
+flyway {
+	url = 'jdbc:postgresql://localhost:5432/'
+	user = 'postgres'
+	password = 'postgres'
+	schemas = ['admin']
+//	placeholders = [
+//			'keyABC': 'valueXYZ',
+//			'otherplaceholder': 'value123'
+//	]
 }
 
 repositories {
@@ -29,4 +42,7 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
+
+	compile "org.flywaydb:flyway-core:6.1.3"
+	flywayMigration "com.mygroupid:my-lib:1.2.3"
 }

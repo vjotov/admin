@@ -10,6 +10,6 @@ public class RegistrationController {
     @Autowired
     private UserSevice userSevice;
 
-    @Autowired
-    private RestTemplate restTemplate;
+//    @Autowired
+//    private RestTemplate restTemplate;
 }
