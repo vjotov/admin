@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Admin</title>
-</head>
-<body>
-Admin
-</body>
-</html>
+<#import "parts/common.ftl" as c>
+
+<@c.page>
+<h5>Hello, guest</h5>
+<div>This is a simple clone off Twitter</div>
+</@c.page>

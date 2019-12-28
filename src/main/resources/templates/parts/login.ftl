@@ -62,8 +62,8 @@
         </#if>
     </div>
     </#if>
-    <!-- input type="hidden" name="_csrf" value="$ {_csrf.token}"/>-->
-    <#if !isRegisterForm><a href="/registration">Registration</a></#if>
+    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+    <!-- #if !isRegisterForm><a href="/registration">Registration</a></ #if -->
     <button type="submit"  class="btn btn-primary"><#if isRegisterForm>Create<#else>Sign In</#if></button>
 </form>
 </#macro>
