@@ -18,8 +18,10 @@ alter table if exists user_role
     add constraint user_role_user_fk
     foreign key (user_id) references usr;
 
+create extension if not exists pgcrypto;
+
 insert into usr (id, username, password, active)
-    values (1, 'admin', crypt('123', gen_salt('bf', 8)), true);
+    values (1, 'admin', crypt('123', gen_salt('bf',8)), true);
 
 insert into user_role (user_id, roles)
     values (1, 'USER'), (1, 'ADMIN');
