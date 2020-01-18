@@ -38,7 +38,7 @@ public class RegistrationController {
     @PostMapping("/registration")
     public String addUser(
             @RequestParam("password2") String passwordConfirm,
-            @RequestParam("g-recaptcha-response") String captchaResponce,
+            //@RequestParam("g-recaptcha-response") String captchaResponce,
             @Valid User user,
             BindingResult bindingResult,
             Model model
