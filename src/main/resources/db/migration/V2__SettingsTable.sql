@@ -1,0 +1,1 @@
+create table setting (id int8 not null, name varchar(255), type varchar(255), val varchar(255), primary key (id));
