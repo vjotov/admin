@@ -15,7 +15,9 @@
 </#macro>
 
 <@c.page>
-Settings
+    <div class="page-header">
+        <h2>Settings </h2>
+    </div>
 
 <table class="table">
     <tbody>

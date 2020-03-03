@@ -1,7 +1,10 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
-<h5>${username}</h5>
+    <div class="page-header">
+        <h2>Profile - ${username} </h2>
+    </div>
+
 ${message?ifExists}
 <form method="post">
     <div class="form-group row">
