@@ -11,8 +11,12 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/setting")
 public class SettingController {
-    @Autowired
     private SettingService settingSevice;
+
+    @Autowired
+    public SettingController(SettingService settingService) {
+        this.settingSevice = settingService;
+    }
 
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping

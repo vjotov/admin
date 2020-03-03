@@ -18,11 +18,13 @@ import java.util.Map;
 
 @Controller
 public class RegistrationController {
-    @Autowired
     private UserSevice userSevice;
 
-//    @Autowired
-//    private UserSevice userSevice;
+    @Autowired
+    public RegistrationController(UserSevice userSevice) {
+        this.userSevice = userSevice;
+    }
+
 
 //    @Value("${recaptcha.secret}")
 //    private String secret;
