@@ -15,7 +15,7 @@ public class SettingService {
 
 
     public List<Setting> findAll() {
-        return settingRepo.findAll();
+        return settingRepo.findAllByOrderByIdAsc();
     }
 
     public void save(Setting setting, String newValue) {
