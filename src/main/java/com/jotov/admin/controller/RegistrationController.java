@@ -25,7 +25,6 @@ public class RegistrationController {
         this.userSevice = userSevice;
     }
 
-
 //    @Value("${recaptcha.secret}")
 //    private String secret;
 

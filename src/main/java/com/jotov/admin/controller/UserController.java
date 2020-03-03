@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.PublicKey;
 import java.util.Map;
 
 @Controller
@@ -20,6 +21,13 @@ public class UserController {
     @Autowired
     public UserController(UserSevice userSevice) {
         this.userSevice = userSevice;
+    }
+
+    @PreAuthorize("hasAuthority('ADMIN')")
+    @GetMapping("/add")
+    public String addUser(Model model) {
+        model.addAttribute("roles", Role.values());
+        return "userAdd";
     }
 
     @PreAuthorize("hasAuthority('ADMIN')")
